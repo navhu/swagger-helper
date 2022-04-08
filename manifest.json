@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Swagger Helper",
+  "description": "swagger助手",
+  "author": "NavHu",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Swagger Helper",
+    "default_popup": "/popup/popup.html",
+    "default_icon": {
+      "16": "/images/icon.png",
+      "32": "/images/icon.png",
+      "48": "/images/icon.png",
+      "128": "/images/icon.png"
+    }
+  },
+  "icons": {
+    "16": "/images/icon.png",
+    "32": "/images/icon.png",
+    "48": "/images/icon.png",
+    "128": "/images/icon.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["inject.js"],
+      "matches": ["<all_urls>"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["storage", "clipboardWrite"]
+}
